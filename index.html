@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteo</title>
+
+    <link rel="icon" href="./assets/icons/rain.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/scss/HomeStyle/dist/header.css">
+    <link rel="stylesheet" href="./assets/scss/HomeStyle/dist/navbar.css">
+    <link rel="stylesheet" href="./assets/scss/HomeStyle/dist/searchbar.css">
+    <link rel="stylesheet" href="./assets/scss/HomeStyle/dist/style.css">
+    <link rel="stylesheet" href="./assets/scss/HomeStyle/dist/citiesContainer.css">
+
+</head>
+
+<body onload="navBarLineHome()">
+
+    <!-- NAVBAR -->
+
+	<nav class="navbar">
+      <div class="l">
+        <a class="ancore_tag" href="./index.html"> <img class="logo" src="./assets/icons/rain.png" alt="Logo"> </a>
+        <a class="ancore_tag" href="./index.html"> <h1 class="h1-logo">Meteo</h1> </a>
+      </div>
+
+      <ul class="main-nav">
+          <li><a id="h" class="a-nav" href="./index.html">Home</a></li>
+          <li><a id="t" class="a-nav" href="./forecasts.html">Forecasts</a></li>
+          <li><a id="a" class="a-nav" href="./about.html">About</a></li>
+      </ul>
+	</nav> 
+
+    <!-- END NAVBAR -->
+
+
+    
+    <!-- HEADER -->
+
+    <section class="header-section">
+        <!-- parte alta con il form nel quale l'utente potrà diigtare la location -->
+        <div class="header">
+            <h1 id="main_h1">Ottieni il meteo della città che vuoi</h1>
+
+            <form class="form" id="weatherForm">
+                <!-- 
+                    Etichetta che rende accessibile il campo del form a cui fa' riferimento
+                    Il riferimento si esprime con attributo "for" nel tag label e deve
+                    contenere la stringa dell'attributo "name" dell'input di cui è etichetta
+                -->
+
+                <div search_container>
+                    <input type="text" name="city" id="city" autocomplete="off" placeholder="Scrivi il nome di una città">
+                </div>
+            
+                <img src="./assets/icons/icon-search.png" alt="search_icon" id="search_icon">
+
+                <span class="message"></span>
+
+            </form>
+
+        </div>
+        
+
+    </section>
+
+    <!-- END HEADER -->
+
+
+    <section class="ajax-section">
+        <!-- sezione con il risultato della chiamata / i dati richiesti -->
+        <div class="container">
+
+            <ul class="cities">
+                <!-- le info ottenute dalla chiamata ajax finiranno qui -->
+            </ul>
+
+        </div>
+    </section>
+
+
+    
+
+    <script src="./assets/javascripts/dist/main.dev.js"></script>
+    <script src="./assets/javascripts/dist/navbar.dev.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+body {
+  /* background-color: $bk_body; */
+  font-family: "Roboto Mono", "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}

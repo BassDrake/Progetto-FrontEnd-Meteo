@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meteo</title>
+
+    <!-- STYLE -->
+
+    <link rel="icon" href="./assets/icons/rain.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="./assets/css/normalize.css">
+    <link rel="stylesheet" href="./assets/scss/HomeStyle/dist/style.css">
+    <link rel="stylesheet" href="./assets/scss/HomeStyle/dist/navbar.css">
+    <link rel="stylesheet" href="./assets/scss/ForecastsStyle/dist/header.css">
+    <link rel="stylesheet" href="./assets/scss/ForecastsStyle/dist/temperature.css">
+
+    <!-- END STYLE -->
+
+</head>
+
+<body onload="navBarLineTrends();">
+
+    <!-- NAVBAR -->
+
+	<nav class="navbar">
+      <div class="l">
+        <a class="ancore_tag" href="./index.html"> <img class="logo" src="./assets/icons/rain.png" alt="Logo"> </a>
+        <a class="ancore_tag" href="./index.html"> <h1 class="h1-logo">Meteo</h1> </a>
+      </div>
+
+      <ul class="main-nav">
+          <li><a id="h" class="a-nav" href="./index.html">Home</a></li>
+          <li><a id="t" class="a-nav" href="./forecasts.html">Forecasts</a></li>
+          <li><a id="a" class="a-nav" href="./about.html">About</a></li>
+      </ul>
+	</nav> 
+
+    <!-- END NAVBAR -->
+
+
+    
+    <!-- HEADER -->
+
+    <div class="header">
+        <h1 id="main_h1">Scopri le previsioni del tempo</h1>
+    </div>
+
+    <!-- END HEADER -->
+
+
+    <div class="containerTemperature">
+        <div class="temperature">
+            <h1>Previsioni Meteo giornaliere</h1>
+            <iframe id="iframe1" src="https://www.3bmeteo.com/moduli_esterni/localita_7_giorni_compatto/4074/ffffff/000000/5e5e5e/ffffff/it" width=900 height=180 frameborder="0"></iframe>
+            <p class="disclaimer1">Le segueti informazioni sono fornite gratuitamente da <a class="meteo3b" href="https://www.3bmeteo.com/">3bMeteo</a></p>
+        </div>
+    
+        <div class="temperature">
+            <h1>Previsioni Meteo orarie</h1>
+            <iframe id="iframe2" src="https://www.3bmeteo.com/moduli_esterni/localita_7_giorni_orario/4074/ffffff/000000/5e5e5e/ffffff/it" width=900 height=482 frameborder="0"></iframe>
+            <p class="disclaimer2">Le segueti informazioni sono fornite gratuitamente da <a class="meteo3b" href="https://www.3bmeteo.com/">3bMeteo</a></p>
+        </div>
+        
+    
+        <div class="temperature">
+            <h1>Previsioni Meteo regionali</h1>
+            <iframe id="iframe3" src="https://www.3bmeteo.com/moduli_esterni/italia_7_giorni/ffffff/000000/5e5e5e/ffffff/it" width="800" height="642" frameborder="0"></iframe>
+            <p class="disclaimer2">Le segueti informazioni sono fornite gratuitamente da <a class="meteo3b" href="https://www.3bmeteo.com/">3bMeteo</a></p>
+        </div>
+    </div>
+
+    
+
+    <!-- END TEMPERATURE -->
+
+    <script src="./assets/javascripts/dist/main.dev.js"></script>
+    <script src="./assets/javascripts/dist/navbar.dev.js"></script>
+
+</body>
+
+</html>
